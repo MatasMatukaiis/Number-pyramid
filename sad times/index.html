@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kabysh</title>
+    <style>
+        body {
+            text-align: center;
+            font-size: 1.5vw;
+        }
+        button {
+            display: block;
+            margin: auto;
+            margin-top: 1vh;
+            width: 10vw;
+            height: 2vh;
+            font-size: 1.2vw;
+        }
+        input {
+            width: 5vw;
+        }
+    </style>
+</head>
+<body>
+    <label for="inputAmount">input the amount of numbers : </label>
+    <input type="text" name="inputAmount">
+    <button>begin</button>
+    <div></div>
+    <script>
+        const div = document.querySelector("div");
+        const button = document.querySelector("button");
+        const body = document.querySelector("body");
+        let numero = document.querySelector("input").value;
+
+        let amountOfRepetitions = 0;
+        let amount = 0;
+        let amounter = 0;
+        
+        button.addEventListener("click", () => {
+            while(amountOfRepetitions < numero) {
+                amount++;
+                amountOfRepetitions++;
+                const p = document.createElement("p")
+                while(amounter < amount) {
+                    p.innerHTML += amount.toString();
+                    amounter++;
+                    
+                }
+                body.appendChild(p);
+            } 
+        })
+        
+    </script>
+</body>
+</html>
