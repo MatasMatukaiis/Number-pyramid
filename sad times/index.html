@@ -31,23 +31,26 @@
         const div = document.querySelector("div");
         const button = document.querySelector("button");
         const body = document.querySelector("body");
-        let numero = document.querySelector("input").value;
+        
 
         let amountOfRepetitions = 0;
         let amount = 0;
         let amounter = 0;
         
         button.addEventListener("click", () => {
+            let numero = document.querySelector("input").value;
             while(amountOfRepetitions < numero) {
                 amount++;
                 amountOfRepetitions++;
-                const p = document.createElement("p")
+                const p = document.createElement("p");
                 while(amounter < amount) {
                     p.innerHTML += amount.toString();
                     amounter++;
-                    
+                    body.appendChild(p);
                 }
-                body.appendChild(p);
+                if(amounter = amount) {
+                    amounter = 0;
+                }
             } 
         })
         
